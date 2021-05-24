@@ -1,13 +1,10 @@
 ﻿using System.Linq;
 
-namespace SportsStore.Models
-{
-    public class EFStoreRepository : IStoreRepository
-    {
+namespace SportsStore.Models {
+    public class EFStoreRepository : IStoreRepository {
         private StoreDbContext context;
 
-        public EFStoreRepository(StoreDbContext ctx)
-        {
+        public EFStoreRepository(StoreDbContext ctx) {
             context = ctx;
         }
 

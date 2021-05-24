@@ -1,33 +1,29 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width" />
     <title>SportsStore</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="~/css/site.css"/>
+    <link href="/lib/twitter-bootstrap/css/bootstrap.min.css" rel="stylesheet" /> hr 
+    <link href="lib/font-awesome/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="btn-dark text-white p-2">
-    <span class="navbar-brand col-md-12">SPORTS STORE</span>
+<div class="bg-dark text-white p-2">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="navbar-brand">SPORTS STORE</div>
+            <div class="col-10 text-right">
+                <vc:cart-summary/>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="row m-1 p-1">
-    <div id="categories" class="col-3">
-        <vc:navigation-menu/>
+    <div class="row m-1 p-1">
+        <div id="categories" class="col-3">
+            <vc:navigation-menu />
+        </div>
+        <div class="col-9">
+            @RenderBody()
+        </div>
     </div>
-    <div class="col-9A">
-        @RenderBody()
-    </div>
-</div>
-
-<footer class="border-top footer text-muted">
-    <div class="container">
-        &copy; 2021 - SportsStore - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-    </div>
-</footer>
-<script src="~/lib/jquery/dist/jquery.min.js"></script>
-<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-<script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
